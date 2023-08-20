@@ -1,52 +1,37 @@
 # C-DS-Library
-Data Structures Library Documentation
+# Data Structures Library Documentation
+
 Welcome to the Data Structures Library documentation. This comprehensive guide will walk you through the various data structures provided by the library, along with their available methods and usage instructions.
 
-Table of Contents
-Introduction
-Doubly Linked List
-Description
-Methods
-Usage
-Singly Linked List
-Description
-Methods
-Usage
-Stack
-Description
-Methods
-Usage
-Queue
-Description
-Methods
-Usage
-AVL Tree
-Description
-Methods
-Usage
-Conclusion
-Introduction
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Doubly Linked List](#doubly-linked-list)
+- [Singly Linked List](#singly-linked-list)
+- [Stack](#stack)
+- [Queue](#queue)
+- [AVL Tree](#avl-tree)
+- [Conclusion](#conclusion)
+
+## Introduction
+
 The Data Structures Library is a collection of C implementations of fundamental data structures. These data structures are designed to provide efficient storage, retrieval, and manipulation of data elements.
 
-Doubly Linked List
-Description
+## Doubly Linked List
+
+### Description
+
 A Doubly Linked List is a linear data structure where each node contains data and two pointers, one pointing to the previous node and another to the next node.
 
-Methods
-createDoublyLinkedList(bool *success): Create an empty Doubly Linked List.
-destroyDoublyLinkedList(DoublyLinkedList *doublyLinkedList): Free the memory occupied by the list.
-clearDoublyLinkedList(DoublyLinkedList *doublyLinkedList): Remove all elements from the list.
-addToDoublyLinkedList(DoublyLinkedList *doublyLinkedList, void *ptr, bool *success): Add an element to the end of the list.
-insertIntoDoublyLinkedList(DoublyLinkedList *doublyLinkedList, int index, void *ptr, bool *success): Insert an element at a specified index.
-getSizeOfDoublyLinkedList(DoublyLinkedList *doublyLinkedList): Get the number of elements in the list.
-getFromDoublyLinkedList(DoublyLinkedList *doublyLinkedList, int index, bool *success): Get the element at a specified index.
-removeFromDoublyLinkedList(DoublyLinkedList *doublyLinkedList, int index, bool *success): Remove the element at a specified index.
-appendToDoublyLinkedList(DoublyLinkedList *target, DoublyLinkedList *source, bool *success): Append elements of source list to the target list.
-getDoublyLinkedListIterator(DoublyLinkedList *doublyLinkedList, bool *success): Get an iterator for traversing the list.
-hasNextInDoublyLinkedList(DoublyLinkedListIterator *iterator): Check if there are more elements in the list.
-getNextElementFromDoublyLinkedList(DoublyLinkedListIterator *iterator, bool *success): Get the next element from the iterator.
-Usage
-'''
+### Methods
+
+- `createDoublyLinkedList(bool *success)`: Create an empty Doubly Linked List.
+- `destroyDoublyLinkedList(DoublyLinkedList *doublyLinkedList)`: Free the memory occupied by the list.
+- ... (other methods)
+
+### Usage
+
+```c
 #include <tm_dll.h>
 #include <tm_common.h>
 
@@ -58,7 +43,6 @@ if (success) {
 
     destroyDoublyLinkedList(list);
 }
-'''
 
 Singly Linked List
 Description
