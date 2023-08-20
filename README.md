@@ -2,31 +2,56 @@
 # Data Structures Library Documentation
 Welcome to the Data Structures Library documentation. This comprehensive guide will walk you through the various data structures provided by the library, along with their available methods and usage instructions.
 
-Table of Contents
-Introduction
-Doubly Linked List
-Description
-Methods
-Usage
-Singly Linked List
-Description
-Methods
-Usage
-Stack
-Description
-Methods
-Usage
-Queue
-Description
-Methods
-Usage
-AVL Tree
-Description
-Methods
-Usage
-Conclusion
-Introduction
+##Table of Contents
+
+- [Introduction](#introduction)
+- [Singly Linked List](#singly-linked-list)
+- [Doubly Linked List](#doubly-linked-list)
+- [Stack](#stack)
+- [Queue](#queue)
+- [AVL Tree](#avl-tree)
+- [Conclusion](#conclusion)
+
+##Introduction
+
 The Data Structures Library is a collection of C implementations of fundamental data structures. These data structures are designed to provide efficient storage, retrieval, and manipulation of data elements.
+
+##Singly Linked List
+
+###Description
+
+A Singly Linked List is a linear data structure where each node contains data and a pointer to the next node.
+
+###Methods
+
+- 'createSinglyLinkedList(bool *success)': Create an empty Singly Linked List.
+- 'destroySinglyLinkedList(SinglyLinkedList *singlyLinkedList)': Free the memory occupied by the list.
+- 'clearSinglyLinkedList(SinglyLinkedList *singlyLinkedList)': Remove all elements from the list.
+- 'addToSinglyLinkedList(SinglyLinkedList *singlyLinkedList, void *ptr, bool *success)': Add an element to the end of the list.
+- 'insertIntoSinglyLinkedList(SinglyLinkedList *singlyLinkedList, int index, void *ptr, bool *success)': Insert an element at a specified index.
+- 'getSizeOfSinglyLinkedList(SinglyLinkedList *singlyLinkedList)': Get the number of elements in the list.
+- 'getFromSinglyLinkedList(SinglyLinkedList *singlyLinkedList, int index, bool *success)': Get the element at a specified index.
+- 'removeFromSinglyLinkedList(SinglyLinkedList *singlyLinkedList, int index, bool *success)': Remove the element at a specified index.
+- 'appendToSinglyLinkedList(SinglyLinkedList *target, SinglyLinkedList *source, bool *success)': Append elements of the source list to the target list.
+- 'getSinglyLinkedListIterator(SinglyLinkedList *singlyLinkedList, bool *success)': Get an iterator for traversing the list.
+- 'hasNextInSinglyLinkedList(SinglyLinkedListIterator *iterator)': Check if there are more elements in the list.
+- 'getNextElementFromSinglyLinkedList(SinglyLinkedListIterator *iterator, bool *success)': Get the next element from the iterator.
+
+###Usage
+
+'''c
+#include <tm_sll.h>
+#include <tm_common.h>
+
+bool success = false;
+SinglyLinkedList *list = createSinglyLinkedList(&success);
+if (success) {
+    // Perform operations on the list
+    // ...
+
+    destroySinglyLinkedList(list);
+}
+'''
 
 Doubly Linked List
 Description
@@ -41,7 +66,7 @@ insertIntoDoublyLinkedList(DoublyLinkedList *doublyLinkedList, int index, void *
 getSizeOfDoublyLinkedList(DoublyLinkedList *doublyLinkedList): Get the number of elements in the list.
 getFromDoublyLinkedList(DoublyLinkedList *doublyLinkedList, int index, bool *success): Get the element at a specified index.
 removeFromDoublyLinkedList(DoublyLinkedList *doublyLinkedList, int index, bool *success): Remove the element at a specified index.
-appendToDoublyLinkedList(DoublyLinkedList *target, DoublyLinkedList *source, bool *success): Append elements of source list to the target list.
+appendToDoublyLinkedList(DoublyLinkedList *target, DoublyLinkedList *source, bool *success): Append elements of the source list to the target list.
 getDoublyLinkedListIterator(DoublyLinkedList *doublyLinkedList, bool *success): Get an iterator for traversing the list.
 hasNextInDoublyLinkedList(DoublyLinkedListIterator *iterator): Check if there are more elements in the list.
 getNextElementFromDoublyLinkedList(DoublyLinkedListIterator *iterator, bool *success): Get the next element from the iterator.
@@ -58,37 +83,6 @@ if (success) {
     // ...
 
     destroyDoublyLinkedList(list);
-}
-Singly Linked List
-Description
-A Singly Linked List is a linear data structure where each node contains data and a pointer to the next node.
-
-Methods
-createSinglyLinkedList(bool *success): Create an empty Singly Linked List.
-destroySinglyLinkedList(SinglyLinkedList *singlyLinkedList): Free the memory occupied by the list.
-clearSinglyLinkedList(SinglyLinkedList *singlyLinkedList): Remove all elements from the list.
-addToSinglyLinkedList(SinglyLinkedList *singlyLinkedList, void *ptr, bool *success): Add an element to the end of the list.
-insertIntoSinglyLinkedList(SinglyLinkedList *singlyLinkedList, int index, void *ptr, bool *success): Insert an element at a specified index.
-getSizeOfSinglyLinkedList(SinglyLinkedList *singlyLinkedList): Get the number of elements in the list.
-getFromSinglyLinkedList(SinglyLinkedList *singlyLinkedList, int index, bool *success): Get the element at a specified index.
-removeFromSinglyLinkedList(SinglyLinkedList *singlyLinkedList, int index, bool *success): Remove the element at a specified index.
-appendToSinglyLinkedList(SinglyLinkedList *target, SinglyLinkedList *source, bool *success): Append elements of source list to the target list.
-getSinglyLinkedListIterator(SinglyLinkedList *singlyLinkedList, bool *success): Get an iterator for traversing the list.
-hasNextInSinglyLinkedList(SinglyLinkedListIterator *iterator): Check if there are more elements in the list.
-getNextElementFromSinglyLinkedList(SinglyLinkedListIterator *iterator, bool *success): Get the next element from the iterator.
-Usage
-c
-Copy code
-#include <tm_sll.h>
-#include <tm_common.h>
-
-bool success = false;
-SinglyLinkedList *list = createSinglyLinkedList(&success);
-if (success) {
-    // Perform operations on the list
-    // ...
-
-    destroySinglyLinkedList(list);
 }
 Stack
 Description
